@@ -1,7 +1,6 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
-export default function App() {
+export default function About() {
   const { t, i18n } = useTranslation();
 
   const handleChangeLng = (lng) => {
@@ -10,11 +9,8 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: "50px" }}>
-      <select
-        style={{ marginBottom: "20px" }}
-        onChange={(e) => handleChangeLng(e.target.value)}
-      >
+    <div style={{ padding: "50px", marginBottom: "20px" }}>
+      <select onChange={(e) => handleChangeLng(e.target.value)}>
         <option value="en">English</option>
         <option value="jp">Jp</option>
         <option value="hi">Hindi</option>
@@ -22,11 +18,11 @@ export default function App() {
 
       <nav>
         <li>
-          <a href="/about">About</a>
+          <a href="/">Home</a>
         </li>
       </nav>
 
-      <h1>{t("home")}</h1>
+      <h1>{t("about")}</h1>
     </div>
   );
 }
